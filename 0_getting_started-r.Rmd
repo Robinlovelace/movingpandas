@@ -131,6 +131,10 @@ In R:
 ```{r}
 plot(traj)
 lines(traj)
+
+# or as sf object
+traj_sf = as(traj, "sf")
+# plot(traj_sf) # fails
 ```
 
 
@@ -145,6 +149,11 @@ To see all available functions of the MovingPandas.Trajectory class use:
 ```{r, engine='python'}
 dir(mp.Trajectory)
 ```
+
+```{r}
+lsf.str("package:trip")
+```
+
 
 Functions that start with an underscore (e.g. ```__str__```) should not be called directly. All other functions are free to use.
 
